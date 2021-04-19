@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    padding: 0.5rem;
+    
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: filter 0.9s;
+
+        svg {
+            color: var(--blue-dark);
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
+    }
+
+    a {
+        font-weight: 700;
+        margin-left: 0.5rem;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+}
