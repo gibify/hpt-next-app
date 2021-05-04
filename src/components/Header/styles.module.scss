@@ -1,18 +1,20 @@
 .container {
     width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
     height: 5rem;
     padding: 2rem;
 
-    p {
+    a {
         display: flex;
         align-items: center;
 
         font-size: 1rem;
-        font-weight: 700;
         cursor: pointer;
 
         &:hover {
             filter: brightness(0.9);
+            font-weight: 700;
         }
 
         & + svg {

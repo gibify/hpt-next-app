@@ -1,7 +1,6 @@
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
 import { SignInButton } from '../components/SignInButton';
 
 import styles from '../styles/Home.module.scss';
@@ -12,7 +11,7 @@ const linkInstagram = 'https://www.instagram.com/hebraicooficial/';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Header />
+      <Header title='nosso grupo, saiba mais...' route='/about'/>
 
       <main className={styles.content}>
 
@@ -35,8 +34,6 @@ export default function Home() {
 
       </main>
 
-      <Footer />
- 
     </div>
   )
 }
