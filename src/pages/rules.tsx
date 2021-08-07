@@ -5,8 +5,6 @@ import { SubscribeButton } from '../components/SubscribeButton';
 export default function Rules() {
     return (
         <main className={styles.container}>
-            <Header  title="voltar" route='/'/>
-            
             <section className={styles.content}>  
 
                 <div>

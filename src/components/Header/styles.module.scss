@@ -1,9 +1,12 @@
 .container {
+    background: var(--blue-dark);
     width: 100%;
     max-width: 1120px;
     margin: 0 auto;
-    height: 5rem;
-    padding: 2rem;
+    height: 64px;
+    padding: 8px;
+
+
 
     a {
         display: flex;

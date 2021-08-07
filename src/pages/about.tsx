@@ -5,8 +5,6 @@ import { Header } from '../components/Header';
 export default function About() {
     return (
         <section className={styles.container}>
-            <Header  title='voltar' route='/' />
-
             <main className={styles.content}>
                 <p>
                 A página, Hebraico pra todos é destinada aos interessados em aprender o Hebraico Moderno. 

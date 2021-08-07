@@ -9,7 +9,7 @@
   --blue-dark: #33A6F2;
   --blue-light: #75C8FF;
   --black: #000000;
-  --background: #E1F5FE;
+  --background: #F9F9F9;
 }
 
 @media (max-width: 1080px) {
@@ -41,6 +41,7 @@ body, input, textarea, select, button {
 
 button {
   cursor: pointer;
+  outline: 0;
 }
 
 a {

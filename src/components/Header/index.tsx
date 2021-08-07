@@ -5,20 +5,12 @@ import Link from 'next/link';
 
 import styles from './styles.module.scss';
 
-interface HeaderProps {
-    title: string;
-    route: string;
-}
-
-export const Header: React.FC<HeaderProps> = (props) => {
+export const Header: React.FC = (props) => {
     return (
         <header className={styles.container}>
-            {props.title === 'voltar'}
-            <Link href={props.route}>
-                {props.title}
-            </Link>
-            {props.title === 'nosso grupo, saiba mais...'}
+           <nav>
+               
+           </nav>
         </header>
-        //  .
     )
 }

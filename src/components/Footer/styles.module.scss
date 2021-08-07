@@ -1,9 +1,10 @@
 .container {
     width: 100%;
-    padding: 0.5rem;
-    
+    padding: 8px;
+    height: 64px;
 
     p {
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -12,6 +13,7 @@
 
         svg {
             color: var(--blue-dark);
+            margin-right: 4px;
         }
 
         @media (max-width: 480px) {
@@ -19,12 +21,9 @@
         }
     }
 
-    a {
+    span {
         font-weight: 700;
-        margin-left: 0.5rem;
-
-        &:hover {
-            filter: brightness(0.9);
-        }
+        margin-left: 4px;
+        text-transform: uppercase;
     }
 }
