@@ -1,11 +1,13 @@
 .container {
-    height:calc(100vh - 128px);
+    height: calc(100vh - 128px);
     display: flex;
 }
 
 .content {
     padding: 2rem;
     margin-top: 3rem;
+    max-width: 1050px;
+    margin: 0 auto;
 
     display: flex;
     flex-direction: row;

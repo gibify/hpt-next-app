@@ -1,6 +1,6 @@
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
-import { SignInButton } from '../components/SignInButton';
+// import { SignInButton } from '../components/SignInButton';
 
 import styles from '../styles/Home.module.scss';
 
@@ -15,7 +15,7 @@ export default function Home() {
           <p>Shalom! Seja Bem Vindo ao</p>
           <img src="/logo-text.svg" alt="Habraico Pra Todos"/>
 
-          <SignInButton />
+          {/* <SignInButton /> */}
         </div>
 
         <div className={styles.imageBag}>

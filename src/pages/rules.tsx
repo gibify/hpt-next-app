@@ -1,6 +1,6 @@
 import styles from '../styles/Rules.module.scss';
     import { Header } from '../components/Header';
-import { SubscribeButton } from '../components/SubscribeButton';
+// import { SubscribeButton } from '../components/SubscribeButton';
 
 export default function Rules() {
     return (
@@ -57,7 +57,7 @@ export default function Rules() {
 
             </section>
 
-            <SubscribeButton />
+            {/* <SubscribeButton /> */}
         </main>
     )
 }

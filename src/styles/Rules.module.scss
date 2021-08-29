@@ -1,6 +1,6 @@
 .container {
     max-width: 1120px;
-    margin: 0 auto;
+    margin: 32px auto;
     margin-bottom: 2rem;
 
     display: flex;
@@ -20,10 +20,10 @@
     margin-bottom: 3rem;
 
     h1 {
-        padding: 2rem;
+        padding: 16px;
         color: var(--blue-dark);
         font-weight: 600;
-        font-size: 2rem;
+        text-transform: uppercase;
     }
 
     p {
