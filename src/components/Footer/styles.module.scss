@@ -1,23 +1,24 @@
-.container {
+.footerContainer {
+    background: var(--blue-dark);
     width: 100%;
-    padding: 8px;
-    height: 64px;
+    height: 100%;
+    padding: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     p {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-
+        color: var(--white);
         transition: filter 0.9s;
 
         svg {
-            color: var(--blue-dark);
+            color: var(--white);
             margin-right: 4px;
-        }
-
-        @media (max-width: 480px) {
-            flex-direction: column;
         }
     }
 
@@ -25,5 +26,14 @@
         font-weight: 700;
         margin-left: 4px;
         text-transform: uppercase;
+    }
+}
+
+@media (max-width: 780px) {
+    .footerContainer { 
+        
+        p {
+            flex-direction: column;
+        }
     }
 }

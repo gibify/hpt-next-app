@@ -1,6 +1,6 @@
 .container {
     max-width: 1120px;
-    margin: 32px auto;
+    margin: 16px auto;
     margin-bottom: 2rem;
 
     display: flex;
@@ -20,7 +20,7 @@
     margin-bottom: 3rem;
 
     h1 {
-        margin: 16px auto;
+        margin-top: 16px;
         padding: 16px;
         color: var(--blue-dark);
         font-weight: 600;
@@ -43,4 +43,18 @@
         font-weight: 700;
     }
 
+}
+
+@media (max-width: 780px) {
+    .content { 
+        padding: 8px;
+
+        h1 { 
+            font-size: 16px;
+        }
+
+        p { 
+            font-size: 14px;
+        }
+    }
 }

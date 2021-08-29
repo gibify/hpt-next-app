@@ -16,7 +16,7 @@ export default function Rules() {
                     O grupo é livre para os membros comunicarem-se, cooperarem e fazerem perguntas sobre o Hebraico Moderno.<br /> 
                     lições em slides e exercícios, que são passados periodicamente.<br /> 
                     Já há mais de 700 delas que foram postadas
-                    no Telegram, no Whatsapp, no <a href="https://www.facebook.com/groups/hebraicoparatodos">Facebook</a> e no <a href="https://www.instagram.com/hebraicooficial/">Instagram</a>.
+                    no <strong>Telegram</strong>, no <strong>Whatsapp</strong>, no <strong>Facebook</strong> e no <strong>Instagram</strong>.
                     Uma boa prática é começar aprendendo por elas.
                     </p>
                 </div>
