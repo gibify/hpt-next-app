@@ -15,10 +15,11 @@
 body {
   background: var(--background);
   color: var(--blue-dark);
+  font-family: 'Poppins', sans-serif;
 }
 
 body, input, textarea, select, button {
-  font: 400 1rem "Roboto", sans-serif;
+  font: 400 1rem 'Poppins', sans-serif;
 }
 
 button {
@@ -31,15 +32,30 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  min-height: calc(100vh - 166px);
+  display: flex;
+
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 @media (max-width: 1080px) {
   html {
       font-size: 93.75%; // 15px
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 780px) {
   html {
       font-size: 87.5%; // 14px
+
+      body {
+        .wrapper {
+          padding: 0 1rem;
+        }
+      }
   }
 }
 

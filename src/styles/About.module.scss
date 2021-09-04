@@ -1,13 +1,23 @@
-.container {
-    height: 100vh;
-}
-
 .content {
+    max-width: 1050px;
+    margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 32px;
 
     p {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .content { 
+        padding: 16px;
+
+        p { 
+            font-size: 1rem;
+        }
     }
 }

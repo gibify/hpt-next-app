@@ -1,16 +1,14 @@
 import styles from '../styles/Rules.module.scss';
-    import { Header } from '../components/Header';
-// import { SubscribeButton } from '../components/SubscribeButton';
 
 export default function Rules() {
     return (
-        <main className={styles.container}>
+        <main className='wrapper'>
             <section className={styles.content}>  
 
                 <div>
                     <h1>Funcionamento do Grupo</h1>
                     <p>
-                    O grupo NÃO é um curso de Hebraico.<br /> O grupo se propõe a ser um espaço de ajuda mútua a estudantes 
+                    O grupo NÂO é um curso de Hebraico.<br /> O grupo se propõe a ser um espaço de ajuda mútua a estudantes 
                     iniciantes ou intermediários no Hebraico Moderno.<br />
                     Haverá postagens de lições diversas, sem uma metodologia nem didática que seja própria do ensino.<br />
                     O grupo é livre para os membros comunicarem-se, cooperarem e fazerem perguntas sobre o Hebraico Moderno.<br /> 
@@ -54,8 +52,6 @@ export default function Rules() {
                 </div>
 
             </section>
-
-            {/* <SubscribeButton /> */}
         </main>
     )
 }

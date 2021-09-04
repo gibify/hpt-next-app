@@ -1,10 +1,8 @@
 import styles from '../styles/About.module.scss';
 
-import { Header } from '../components/Header'; 
-
 export default function About() {
     return (
-        <section className={styles.container}>
+        <section className='wrapper'>
             <main className={styles.content}>
                 <p>
                 A página, Hebraico pra todos é destinada aos interessados em aprender o Hebraico Moderno. 

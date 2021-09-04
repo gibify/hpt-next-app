@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 // import { SignInButton } from '../components/SignInButton';
@@ -9,24 +10,36 @@ const linkInstagram = 'https://www.instagram.com/hebraicooficial/';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.content}>
-        <div >
-          <p>Shalom! Seja Bem Vindo ao</p>
-          <img src="/logo-text.svg" alt="Habraico Pra Todos"/>
+    <div className='wrapper'>
+      <div className={styles.content}>
+        <main>
+            <div>
+              <p>Shalom! Seja Bem Vindo ao</p>
+              <Image 
+              src="/logo-text.svg" 
+              alt="Habraico Pra Todos"
+              width={565}
+              height={90}
+              />
+            </div>
 
-          {/* <SignInButton /> */}
-        </div>
+            {/* <SignInButton /> */}
+          </main>
 
-        <div className={styles.imageBag}>
-          <img src="/logo.svg" alt="Estrela Bandeira de Israel"/>
+        <aside className={styles.imageBag}>
+          <Image
+          src="/logo.svg" 
+          alt="Estrela Bandeira de Israel"
+          width={250}
+          height={250}
+          />
         
-          <div>
+          <div className={styles.links}> 
             <a href={linkFacebook}><FaFacebook /></a>
             <a href={linkInstagram}><FaInstagram /></a>
           </div>
-        </div>
-      </main>
+        </aside>
+      </div>
     </div>
   )
 }
