@@ -1,12 +1,14 @@
-import { GetServerSideProps } from 'next';
+// import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useContext, useState } from 'react';
+
+import { useContext } from 'react';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
-import { SignInButton } from '../components/SignInButton';
 import { AuthContext } from '../contexts/AuthContext';
+import { SignInButton } from '../components/SignInButton';
 import { supabase } from '../services/supabase';
+
 import styles from '../styles/Home.module.scss';
 
 const linkFacebook = 'https://www.facebook.com/groups/hebraicoparatodos';
@@ -14,8 +16,8 @@ const linkInstagram = 'https://www.instagram.com/hebraicooficial/';
 
 export default function Home() {
   const router = useRouter()
-  const { user, session } = useContext(AuthContext);
-  console.log(user);
+  const { user } = useContext(AuthContext);
+
   async function signInWithFacebook() {
       const { error } = await supabase.auth.signIn({
         provider: 'facebook',
@@ -37,10 +39,10 @@ export default function Home() {
             <div>
               <p>Shalom! Seja Bem Vindo ao</p>
               <Image 
-              src="/logo-text.svg" 
-              alt="Hebraico Pra Todos"
-              width={565}
-              height={90}
+                src="/logo-text.svg" 
+                alt="Hebraico Pra Todos"
+                width={565}
+                height={90}
               />
             </div>
 
@@ -49,10 +51,10 @@ export default function Home() {
 
         <aside className={styles.imageBag}>
           <Image
-          src="/logo.svg" 
-          alt="Estrela Bandeira de Israel"
-          width={250}
-          height={250}
+            src="/logo.svg" 
+            alt="Estrela Bandeira de Israel"
+            width={250}
+            height={250}
           />
         
           <div className={styles.links}> 
