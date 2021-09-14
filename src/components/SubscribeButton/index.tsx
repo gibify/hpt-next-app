@@ -1,10 +1,23 @@
+import { useRouter } from 'next/router';
+import { FaTelegram } from 'react-icons/fa';
+
 import styles from './styles.module.scss';
-import { FaWhatsapp } from 'react-icons/fa';
+
+const telegramGrouplink = 'https://tttttt.me/gibifyofficial';
 
 export function SubscribeButton() {
+    const router = useRouter();
+
+    function goToTelegramGroup() {
+        router.push(`${telegramGrouplink}`);
+    }
+
     return (
-        <button type="submit" className={styles.container}>
-            <FaWhatsapp />
+        <button 
+            className={styles.container}
+            onClick={goToTelegramGroup}
+        >
+            <FaTelegram />
             Entrar no grupo
         </button>
     )
