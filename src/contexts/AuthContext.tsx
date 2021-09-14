@@ -8,13 +8,9 @@ interface AuthContextProps {
 	session?: Session;
 }
 
-interface Props {
-	children: ReactChild;
-}
-
 export const AuthContext = createContext({} as AuthContextProps);
 
-export function AuthProvider(props: Props) {
+export function AuthProvider(props) {
 	const [user, setUser] = useState<User>();
 	const [session, setSession] = useState<Session>();
 
