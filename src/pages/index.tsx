@@ -1,9 +1,9 @@
-// import { GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { useContext } from 'react';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaIgloo, FaInstagram } from 'react-icons/fa';
 
 import { AuthContext } from '../contexts/AuthContext';
 import { SignInButton } from '../components/SignInButton';
@@ -17,20 +17,21 @@ const linkInstagram = 'https://www.instagram.com/hebraicooficial/';
 export default function Home() {
   const router = useRouter()
   const { user } = useContext(AuthContext);
-
+ 
   async function signInWithFacebook() {
       const { error } = await supabase.auth.signIn({
         provider: 'facebook',
       });
 
-      if(error) {
+      if (error) {
         return;
       }
   }
-
-  if(user) {
+  
+  if (user) {
     router.push('/signed');
   }
+    
 
   return (
     <div className='wrapper'>
@@ -48,7 +49,6 @@ export default function Home() {
 
             <SignInButton onClick={signInWithFacebook}/>
           </main>
-
         <aside className={styles.imageBag}>
           <Image
             src="/logo.svg" 
@@ -67,10 +67,18 @@ export default function Home() {
   )
 }
 
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-// const { user } = await supabase.auth.api.getUserByCookie(context.req);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+const { user } = await supabase.auth.api.getUserByCookie(context.req);
 
-//   return {
-//     props: { user }
-//   }
-// }
+if(user) {
+  return {
+    redirect: {
+      destination: '/signed',
+      permanent: false
+    }
+  }
+}
+  return {
+    props: { user }
+  }
+}

@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
                     {
                         router.pathname === '/about' && 
                         <Link href="/">Home</Link>
-                    }    
+                    }  
                 </div>
             </div>
         </header>

@@ -1,5 +1,5 @@
 import { User, Session } from '@supabase/supabase-js';
-import { createContext, ReactChild, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { supabase } from '../services/supabase';
 
 
@@ -11,8 +11,8 @@ interface AuthContextProps {
 export const AuthContext = createContext({} as AuthContextProps);
 
 export function AuthProvider(props) {
-	const [user, setUser] = useState<User>();
-	const [session, setSession] = useState<Session>();
+	const [user, setUser] = useState<User>(null);
+	const [session, setSession] = useState<Session>(null);
 
 	useEffect(() => {
 		const currentSession = supabase.auth.session();
@@ -23,6 +23,7 @@ export function AuthProvider(props) {
 		}
 
     const { data } = supabase.auth.onAuthStateChange((event, newSession) => {
+			console.log(data)
         setSession(newSession);
 				setUser(newSession?.user);
 
@@ -30,8 +31,8 @@ export function AuthProvider(props) {
 					method: 'POST',
 					headers: { 'Content-type': 'application/json' },
 					credentials: 'same-origin',
-					body: JSON.stringify({ event, session: newSession })
-				})
+					body: JSON.stringify({ event,  session: newSession })
+				});
 		});
 
 		return () => {
@@ -39,6 +40,7 @@ export function AuthProvider(props) {
 		}
 }, [])
 
+	
 	return (
 		<AuthContext.Provider value={{ user, session }}>
 				{props.children}
