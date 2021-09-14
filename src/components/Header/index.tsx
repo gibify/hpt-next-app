@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { useRouter }  from 'next/router';
 
 import styles from './styles.module.scss';
@@ -15,7 +14,7 @@ export const Header: React.FC = () => {
                         router.pathname === '/' && 
                         <Link href="/rules">Regras</Link>
                     }
-                   {
+                    {
                         router.pathname === '/' &&
                         <Link href="/about">Sobre</Link>
                     }
@@ -26,16 +25,8 @@ export const Header: React.FC = () => {
                     {
                         router.pathname === '/about' && 
                         <Link href="/">Home</Link>
-                    }    
+                    }  
                 </div>
-                {/* <div className={styles.logo}>
-                    <Image 
-                        src="/logo-text-white.svg"
-                        alt="logo branco"
-                        width={250}
-                        height={80}
-                    />
-                </div> */}
             </div>
         </header>
     )

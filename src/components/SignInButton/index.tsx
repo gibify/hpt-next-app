@@ -1,11 +1,15 @@
+import router, { useRouter } from 'next/router';
+import { FaSignInAlt } from 'react-icons/fa';
 import styles from './styles.module.scss';
-import { FaFacebook } from 'react-icons/fa';
 
-export function SignInButton() {
+export function SignInButton({ onClick }) {
     return (
-        <button type="submit" className={styles.container}>
-            <FaFacebook />
-            Entrar pelo Facebook
+        <button 
+            className={styles.container}
+            onClick={onClick}
+        >
+            <FaSignInAlt />
+            Entrar com o Facebook
         </button>
     )
 }
