@@ -23,7 +23,6 @@ export function AuthProvider(props) {
 		}
 
     const { data } = supabase.auth.onAuthStateChange((event, newSession) => {
-			console.log(data)
         setSession(newSession);
 				setUser(newSession?.user);
 

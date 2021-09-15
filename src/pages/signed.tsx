@@ -11,7 +11,7 @@ import styles from "../styles/Signed.module.scss";
 
 export default function Signed() {
   const { user } = useContext(AuthContext);
-  console.log(user)
+
   async function signOutFromFacebook() {
     const { error } = await supabase.auth.signOut();
 
@@ -27,7 +27,7 @@ export default function Signed() {
     <div className="wrapper">
       <div className={styles.content}>
             <p>Shalom, <br />
-                <span >{user ? user?.user_metadata?.full_name : ''}</span>
+                <span >{user ? user?.email : ''}</span>
               </p>
             <h1>Seja Bem Vindo ao</h1>
             <Image
