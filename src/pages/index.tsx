@@ -16,7 +16,7 @@ const linkInstagram = 'https://www.instagram.com/hebraicooficial/';
 
 export default function Home() {
   const router = useRouter()
-  const { session } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
  
   async function signInWithFacebook() {
       const { error } = await supabase.auth.signIn({
@@ -26,14 +26,12 @@ export default function Home() {
       if (error) {
         return;
       }
-      if(session) {
+
+      if(user) {
         router.push('/signed');
       }
-      
   }
   
-    
-
   return (
     <div className='wrapper'>
       <div className={styles.content}>

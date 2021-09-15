@@ -11,7 +11,7 @@ import styles from "../styles/Signed.module.scss";
 
 export default function Signed() {
   const { user } = useContext(AuthContext);
-  console.log(user)
+  
   async function signOutFromFacebook() {
     const { error } = await supabase.auth.signOut();
 
@@ -19,9 +19,10 @@ export default function Signed() {
       return error;
     }
 
-    await router.push('/');
+    if(!user) {
+      router.push('/');
+    }
   }
-
   
   return (
     <div className="wrapper">
