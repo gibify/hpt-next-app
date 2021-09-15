@@ -27,9 +27,8 @@ export default function Home() {
         return;
       }
 
-      if (user) {
-        router.push('/signed');
-      }
+      await router.push('/signed');
+      
   }
   
     
