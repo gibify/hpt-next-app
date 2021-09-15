@@ -26,11 +26,11 @@ export default function Home() {
       if (error) {
         return;
       }
+
+      await router.push('/signed');
+      
   }
   
-  if (user) {
-    router.push('/signed');
-  }
     
 
   return (

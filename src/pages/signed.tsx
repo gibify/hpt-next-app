@@ -18,17 +18,16 @@ export default function Signed() {
     if (error) {
       return error;
     }
+
+    await router.push('/');
   }
 
-  if (!user) {
-    router.push('/');
-  }
   
   return (
     <div className="wrapper">
       <div className={styles.content}>
             <p>Shalom, <br />
-                <span >{user ? user?.user_metadata.full_name : ''}</span>
+                <span >{user ? user?.user_metadata?.full_name : ''}</span>
               </p>
             <h1>Seja Bem Vindo ao</h1>
             <Image
