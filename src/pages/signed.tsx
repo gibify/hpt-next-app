@@ -18,7 +18,10 @@ export default function Signed() {
     if (error) {
       return error;
     }
-    
+
+  }
+
+  if(!user) {
     router.push('/'); 
   }
   

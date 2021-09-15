@@ -19,19 +19,19 @@ export default function Home() {
   const { user } = useContext(AuthContext);
  
   async function signInWithFacebook() {
-      const { error } = await supabase.auth.signIn({
-        provider: 'facebook',
-      });
+    const { error } = await supabase.auth.signIn({
+      provider: 'facebook',
+    });
 
-      if (error) {
-        return;
-      }
-
-      if(user) {
-        router.push('/signed');
-      }
+    if (error) {
+      return;
+    }
   }
-  
+    
+  if(user) {
+    router.push('/signed');
+  }
+
   return (
     <div className='wrapper'>
       <div className={styles.content}>
