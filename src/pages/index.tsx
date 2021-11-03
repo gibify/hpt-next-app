@@ -46,7 +46,7 @@ export default function Home() {
               />
             </div>
 
-<!--             <SignInButton onClick={signInWithFacebook}/> -->
+        <!--  <SignInButton onClick={signInWithFacebook}/> -->
           </main>
         <aside className={styles.imageBag}>
           <Image
