@@ -1,13 +1,13 @@
-import { GetServerSideProps } from 'next';
+// import { GetServerSideProps } from 'next';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import { FaFacebook, FaIgloo, FaInstagram } from 'react-icons/fa';
 
-import { AuthContext } from '../contexts/AuthContext';
-import { SignInButton } from '../components/SignInButton';
-import { supabase } from '../services/supabase';
+// import { AuthContext } from '../contexts/AuthContext';
+// import { SignInButton } from '../components/SignInButton';
+// import { supabase } from '../services/supabase';
 
 import styles from '../styles/Home.module.scss';
 
@@ -15,22 +15,22 @@ const linkFacebook = 'https://www.facebook.com/groups/hebraicoparatodos';
 const linkInstagram = 'https://www.instagram.com/hebraicooficial/';
 
 export default function Home() {
-  const router = useRouter()
-  const { user } = useContext(AuthContext);
+//   const router = useRouter()
+//   const { user } = useContext(AuthContext);
  
-  async function signInWithFacebook() {
-    const { error } = await supabase.auth.signIn({
-      provider: 'facebook',
-    });
+//   async function signInWithFacebook() {
+//     const { error } = await supabase.auth.signIn({
+//       provider: 'facebook',
+//     });
 
-    if (error) {
-      return;
-    }
-  }
+//     if (error) {
+//       return;
+//     }
+//   }
     
-  if(user) {
-    router.push('/signed');
-  }
+//   if(user) {
+//     router.push('/signed');
+//   }
 
   return (
     <div className='wrapper'>
@@ -46,7 +46,7 @@ export default function Home() {
               />
             </div>
 
-            <SignInButton onClick={signInWithFacebook}/>
+<!--             <SignInButton onClick={signInWithFacebook}/> -->
           </main>
         <aside className={styles.imageBag}>
           <Image
